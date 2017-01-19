@@ -27,9 +27,9 @@ if ($amountOfEntries -gt 0){
 	
 	$now = "$($oDate.hour):$($minute)";
 
-	$smtp = new-object Net.Mail.SmtpClient("exch01")#change
+	$smtp = New-Object Net.Mail.SmtpClient("exch01")#change
 
-	$credentials = new-object Net.NetworkCredential("andrewj", $password)
+	$credentials = New-Object Net.NetworkCredential("andrewj", $password)
 	$smtp.Credentials = $credentials
 	$smtp.EnableSsl = "true"
 
